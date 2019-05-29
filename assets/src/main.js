@@ -1,8 +1,8 @@
 require.config({
   paths: {
     'text': 'https://cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text.min',
-    'Vue': 'https://cdn.jsdelivr.net/npm/vue@latest/dist/vue.min',
-    'Vuex': 'https://cdn.jsdelivr.net/npm/vuex@latest/dist/vuex.min',
+    'Vue': 'https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min',
+    'Vuex': 'https://cdn.jsdelivr.net/npm/vuex@3.1.1/dist/vuex.min',
     'ZAFClient': 'https://assets.zendesk.com/apps/sdk/2.0/zaf_sdk',
   },
   shim: {
@@ -12,7 +12,7 @@ require.config({
 });
 
 require([
-  'components/App',
+  'components/App/App',
   'store/store',
   'Vue',
   'libs/ZDClient',
