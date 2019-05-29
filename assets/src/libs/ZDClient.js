@@ -32,6 +32,14 @@ define([
     },
 
     /**
+     * It returns true if the app is installed in the instance, false if
+     * it's running locally
+     */
+    isProduction() {
+      return !!APP_SETTINGS['IS_PRODUCTION'];
+    },
+
+    /**
      * It sets the frame height using on the passed value.
      * If no value has been passed, 80 will be set as default heigth.
      * @param {Int} newHeight
