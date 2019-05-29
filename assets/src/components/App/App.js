@@ -1,15 +1,15 @@
 define([
+  'text!./template.html',
   'Vuex',
   'libs/ZDClient',
 ],function(
+  template,
   Vuex,
   zdClient
 ) {
 
   return {
-    template: `
-      <h1>{{helloWorld}}</h1>
-    `,
+    template,
     computed: {
       ...Vuex.mapState([
         'helloWorld',
