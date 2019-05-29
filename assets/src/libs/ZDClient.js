@@ -3,7 +3,9 @@ define([
 ],function(
   ZAFClient
 ) {
+
   let CLIENT = null;
+  let APP_SETTINGS = null;
 
   return {
     events: {
@@ -12,9 +14,21 @@ define([
       },
       ON_APP_REGISTERED(cb) {
         return CLIENT.on('app.registered', (data) => {
+          APP_SETTINGS = data.metadata.settings;
           return cb(data);
         });
       }
+    },
+
+    /**
+     * It returns a specified setting the entire settings object.
+     * @param {String || null} property
+     * @returns String
+     */
+    getAppSettings(property) {
+      return APP_SETTINGS[property] !== undefined
+        ? APP_SETTINGS[property]
+        : APP_SETTINGS;
     },
 
     /**
