@@ -12,10 +12,10 @@ define([
       INIT() {
         CLIENT = ZAFClient.init();
       },
-      ON_APP_REGISTERED(cb) {
+      ON_APP_REGISTERED(callback) {
         return CLIENT.on('app.registered', (data) => {
           APP_SETTINGS = data.metadata.settings;
-          return cb(data);
+          return callback(data);
         });
       }
     },
