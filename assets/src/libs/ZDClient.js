@@ -9,15 +9,16 @@ define([
 
   return {
     events: {
-      INIT() {
-        CLIENT = ZAFClient.init();
-      },
-      ON_APP_REGISTERED(callback) {
+      APP_REGISTERED(callback) {
         return CLIENT.on('app.registered', (data) => {
           APP_SETTINGS = data.metadata.settings;
           return callback(data);
         });
       }
+    },
+
+    init() {
+      CLIENT = ZAFClient.init();
     },
 
     /**
