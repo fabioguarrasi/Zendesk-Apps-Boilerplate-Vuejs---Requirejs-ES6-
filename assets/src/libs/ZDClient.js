@@ -3,11 +3,17 @@ define([
 ],function(
   ZAFClient
 ) {
+  'use strict';
 
   let CLIENT = null;
   let APP_SETTINGS = null;
 
   return {
+
+    init() {
+      CLIENT = ZAFClient.init();
+    },
+
     events: {
       APP_REGISTERED(callback) {
         return CLIENT.on('app.registered', (data) => {
@@ -17,19 +23,11 @@ define([
       }
     },
 
-    init() {
-      CLIENT = ZAFClient.init();
-    },
-
     /**
-     * It returns a specified setting the entire settings object.
-     * @param {String || null} property
-     * @returns String
+     * Set getters for privite objects
      */
-    getAppSettings(property) {
-      return APP_SETTINGS[property] !== undefined
-        ? APP_SETTINGS[property]
-        : APP_SETTINGS;
+    app: {
+      get settings() { return APP_SETTINGS; }
     },
 
     /**
