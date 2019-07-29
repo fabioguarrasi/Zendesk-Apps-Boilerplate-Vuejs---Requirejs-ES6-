@@ -31,6 +31,6 @@ require([
       el: '#app',
       store: store,
       render: (h) => { return h(App) },
-    });
+    })
   }
 });
