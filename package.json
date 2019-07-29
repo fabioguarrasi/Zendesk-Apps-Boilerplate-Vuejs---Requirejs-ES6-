@@ -1,0 +1,24 @@
+{
+  "name": "requirejs6_vue_app",
+  "version": "1.0.0",
+  "description": "The scope of this project is a to have a ready to go app boilerplate to start building zendesk apps using:",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "./node_modules/.bin/eslint assets/src/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabioguarrasi/requirejs6_vue_app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fabioguarrasi/requirejs6_vue_app/issues"
+  },
+  "homepage": "https://github.com/fabioguarrasi/requirejs6_vue_app#readme"
+}

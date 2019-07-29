@@ -1,0 +1,23 @@
+{
+  "root": true,
+  "env": {
+    "browser": false,
+    "node": true
+  },
+  "extends": "eslint:recommended",
+  "globals": {
+    "window": true,
+    "require": true,
+    "define": true
+  },
+  "rules": {
+    "comma-dangle": ["error", "never"],
+    "comma-spacing": ["error", { "before": false, "after": true }],
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "no-extra-boolean-cast": "off",
+    "no-new": "off",
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"]
+  }
+}
