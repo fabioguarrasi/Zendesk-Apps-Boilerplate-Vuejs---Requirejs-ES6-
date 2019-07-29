@@ -28,7 +28,7 @@ require([
 
   function initVueApp() {
       new Vue({
-      el: '#app',
+      el: '#app' ,
       store: store,
       render: (h) => { return h(App) },
     });
