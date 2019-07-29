@@ -26,11 +26,11 @@ require([
   zdClient.init();
   zdClient.events['APP_REGISTERED'](initVueApp);
 
-  function initVueApp(data) {
-    const vm = new Vue({
+  function initVueApp() {
+    new Vue({
       el: '#app',
       store: store,
       render: (h) => { return h(App) },
-    })
+    });
   }
 });
