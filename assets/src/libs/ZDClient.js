@@ -1,7 +1,7 @@
 define([
-  'ZAFClient'
-],function(
-  ZAFClient
+  'ZAFClient',
+], function(
+  ZAFClient,
 ) {
   'use strict';
 

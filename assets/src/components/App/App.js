@@ -5,7 +5,7 @@ define([
 ],function(
   template,
   Vuex,
-  zdClient
+  zdClient,
 ) {
 
   return {
